@@ -6,7 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./recipe-detail.component.css']
 })
 export class RecipeDetailComponent implements OnInit {
+  selectedValue: string;
 
+  recipeOptions = [
+    {value: 'list', viewValue: 'To Shopping List'},
+    {value: 'edit', viewValue: 'Edit Recipe'},
+    {value: 'delete', viewValue: 'Delete Recipe'}
+  ];
   constructor() { }
 
   ngOnInit() {

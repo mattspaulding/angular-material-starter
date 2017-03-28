@@ -1,3 +1,15 @@
-<p>
-  recipe-detail works!
-</p>
+<div>
+  <img src="" alt="" class="mat-card-image">
+</div>
+<form>
+  <md-select placeholder="Manage Recipe" [(ngModel)]="selectedValue" name="recipeOption">
+    <md-option *ngFor="let recipeOption of recipeOptions" [value]="recipeOption.value">
+      {{recipeOption.viewValue}}
+    </md-option>
+  </md-select>
+
+  <p> Selected value: {{selectedValue}} </p>
+</form>
+<div>
+  Ingredients
+</div>

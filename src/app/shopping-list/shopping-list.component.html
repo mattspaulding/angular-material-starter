@@ -1,5 +1,10 @@
 <div>
   <app-shopping-edit></app-shopping-edit>
   <hr>
-  <p>the list</p>
+  <md-nav-list dense>
+    <h3 md-subheader>Recipes</h3>
+    <a md-list-item href="*" *ngFor="let ingredient of ingredients" style="cursor:pointer;">
+    {{ingredient.name}} ({{ingredient.amount}})
+    </a>
+  </md-nav-list>
 </div>
