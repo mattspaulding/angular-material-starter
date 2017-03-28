@@ -1,5 +1,49 @@
-<h1>
-  {{title}}
-</h1>
-<button md-button>hey</button>
-<md-icon>home</md-icon>
+<app-header></app-header>
+
+<md-sidenav-container class="example-sidenav-fab-container">
+  <md-sidenav #sidenav mode="side" opened="true">
+    <button md-mini-fab class="example-fab" (click)="sidenav.toggle()">
+      <md-icon>add</md-icon>
+    </button>
+    <md-list>
+      <h3 md-subheader>Components</h3>
+      <md-list-item>
+        <md-icon md-list-avatar>timeline</md-icon>
+        <h4 md-line>Button</h4>
+        <p md-line> click them </p>
+      </md-list-item>
+      <md-list-item>
+        <md-icon md-list-avatar>timeline</md-icon>
+        <h4 md-line>Button</h4>
+        <p md-line> click them </p>
+      </md-list-item>
+      <h3 md-subheader>Examples</h3>
+      <md-list-item>
+        <md-icon md-list-avatar>list</md-icon>
+        <h4 md-line>Grocery List</h4>
+        <p md-line> store shopping </p>
+      </md-list-item>
+      <md-list-item>
+        <md-icon md-list-avatar>list</md-icon>
+        <h4 md-line>Servers</h4>
+        <p md-line> dynamic list </p>
+      </md-list-item>
+    </md-list>
+  </md-sidenav>
+  <button md-mini-fab class="example-fab" (click)="sidenav.toggle()">
+    <md-icon>add</md-icon>
+  </button>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <app-recipes></app-recipes>
+      <app-shopping-list></app-shopping-list>
+    </div>
+  </div>
+</div>
+<hr>
+<app-servers></app-servers>
+
+  <!--&lt;!&ndash; primary content &ndash;&gt;-->
+<!--</md-sidenav-container>-->
